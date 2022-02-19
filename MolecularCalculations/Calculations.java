@@ -73,7 +73,7 @@ public class Main {
 
         // for each input molecule run the calculation and display the results
         System.out.println("molecule\tlogP");
-        MolImporter mi = new MolImporter("C:\\Users\\Simon\\Downloads\\molecules1.sdf");
+        MolImporter mi = new MolImporter(".\molecules1.sdf");
         Molecule target = null;
         int compoundID = 1;
         while ((target = mi.read()) != null) {
@@ -150,7 +150,7 @@ public class Main {
         plugin.setpH(7.4);
 
         // read target molecule
-        MolImporter mi = new MolImporter("C:\\Users\\Simon\\Downloads\\molecules1.sdf");
+        MolImporter mi = new MolImporter(".\molecules1.sdf");
 
 
         Molecule target = null;
