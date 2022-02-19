@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="1280.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Summary ">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="Summ" layoutX="14.0" layoutY="45.0" prefHeight="680.0" prefWidth="1246.0">
+                    <columns>
+                      <TableColumn fx:id="compoundID" prefWidth="100.0" text="CompoundID" />
+                      <TableColumn fx:id="compoundName" prefWidth="227.5" text="Compound Name" />
+                        <TableColumn fx:id="formula" prefWidth="169.0" text="Formula" />
+                        <TableColumn fx:id="molecularMass" prefWidth="159.0" text="Molecular Mass" />
+                        <TableColumn fx:id="numberOfAcidicGroups" prefWidth="128.0" text="#Acidic Groups" />
+                        <TableColumn fx:id="rotatableBonds" prefWidth="122.5" text="#Rotatable Bonds" />
+                        <TableColumn fx:id="ringCount" prefWidth="72.5" text="Ring Count" />
+                        <TableColumn fx:id="molecularRefractivity" prefWidth="158.5" text="Molecular Refractivity" />
+                        <TableColumn fx:id="surfaceArea" prefWidth="108.0" text="Surface Area" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id = "summarySave" layoutX="1050.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%); -fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Save" />
+                  <Button layoutX="1149.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%);    -fx-background-radius: 8,7,6;    -fx-background-insets: 0,1,2;    -fx-text-fill: black;    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Cancel" />
+                  <TextField fx:id = "summarySearch"  layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="215.0" />
+                  <Label layoutX="239.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Lipinski Filter">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="688.0" prefWidth="1280.0">
+               <children>
+                  <TableView fx:id="lipinskiTable" layoutX="15.0" layoutY="45.0" prefHeight="681.0" prefWidth="1251.0">
+                    <columns>
+                      <TableColumn fx:id="LipinskicompoundID" prefWidth="108.5" text="CompoundID" />
+                      <TableColumn fx:id="LipinskiName" prefWidth="295.5" text="Compound Name" />
+                        <TableColumn fx:id="hydrogenAcceptor" prefWidth="220.5" text="# Hydrogen Acceptors" />
+                        <TableColumn fx:id="hydrogenDonor" prefWidth="198.0" text="# Hydrogen Donors" />
+                        <TableColumn fx:id="LipinskiMass" prefWidth="251.0" text="Molecular Mass" />
+                        <TableColumn fx:id="logP" prefWidth="176.5" text="LogP" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id = "lipinskiSave"   layoutX="1057.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%); -fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Save" />
+                  <Button layoutX="1150.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%); -fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Cancel" />
+                  <TextField fx:id = "lipinskiSearch" layoutX="15.0" layoutY="14.0" prefHeight="25.0" prefWidth="197.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Ghose Filter">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="ghoseTable" layoutX="16.0" layoutY="48.0" prefHeight="675.0" prefWidth="1248.0">
+                    <columns>
+                      <TableColumn fx:id="ghoseCompoundID" prefWidth="128.5" text="CompoundID" />
+                      <TableColumn fx:id="ghoseCompoundName" prefWidth="328.5" text="Compound Name" />
+                        <TableColumn fx:id="GhoselogP" prefWidth="171.0" text="LogP" />
+                        <TableColumn fx:id="ghoseMolecularMass" prefWidth="235.0" text="Molecular Mass" />
+                        <TableColumn fx:id="ghoseMolecularRefractivity" prefWidth="228.5" text="Molecular Refractivity" />
+                        <TableColumn fx:id="ghoseTotalAtoms" prefWidth="155.5" text="Total Atoms" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="ghoseSave"  layoutX="1032.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%); -fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Save" />
+                  <Button layoutX="1132.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%); -fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Cancel" />
+                  <TextField fx:id="ghoseSearch" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="197.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Blood-Brain-Barrier Likeness">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="bbbTable" layoutX="14.0" layoutY="49.0" prefHeight="658.0" prefWidth="1242.0">
+                    <columns>
+                      <TableColumn fx:id="bbbCompoundID" prefWidth="118.0" text="CompoundID" />
+                      <TableColumn fx:id="bbbCompoundName" prefWidth="417.0" text="Compound Name" />
+                        <TableColumn fx:id="bbbhydrogenBonds" prefWidth="215.5" text="#Hydrogen Bonds" />
+                        <TableColumn fx:id="bbbmolecularMass" prefWidth="295.0" text="Molecular Mass" />
+                        <TableColumn fx:id="bbbNumberAcidic" prefWidth="195.5" text="#Acidic Groups" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="bbbSave" layoutX="1015.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%); -fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Save" />
+                  <Button layoutX="1111.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%); -fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Cancel" />
+                  <TextField fx:id="bbbSearch"    layoutX="20.0" layoutY="13.0" prefHeight="25.0" prefWidth="197.0" />
+
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="weighted Quantitative Estimate of Drug-Likeness ">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="721.0" prefWidth="1280.0">
+               <children>
+                  <TableView fx:id="qedTableView" layoutX="15.0" layoutY="52.0" prefHeight="668.0" prefWidth="1251.0">
+                    <columns>
+                      <TableColumn fx:id="qedCompoundID" prefWidth="131.0" text="CompoundID" />
+                      <TableColumn fx:id="qedCompoundName" minWidth="0.0" prefWidth="155.0" text="Compound Name" />
+                        <TableColumn fx:id="qedmolecularMass" prefWidth="138.5" text="Molecular Mass" />
+                        <TableColumn fx:id="AlogP" prefWidth="65.0" text="AlogP" />
+                        <TableColumn fx:id="qedhydrogenAcceptor" prefWidth="126.0" text="#Hydrogen Bond Acceptor" />
+                        <TableColumn fx:id="qedhydrogenDonor" prefWidth="129.0" text="#Hydrogen Bond Donor" />
+                        <TableColumn fx:id="qedrotatableBonds" prefWidth="124.0" text="# Rotatable Bond" />
+                        <TableColumn fx:id="qedsurfaceArea" prefWidth="170.0" text="Polar Surface Area" />
+                        <TableColumn fx:id="qedringCount" prefWidth="92.0" text="Ring Count" />
+                        <TableColumn fx:id="wQED" prefWidth="119.5" text="wQED Value" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="wQEDSave"   layoutX="1039.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%); -fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Save" />
+                  <Button layoutX="1134.0" layoutY="732.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f2f2f2, #d6d6d6),        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),        linear-gradient(#dddddd 0%, #f6f6f6 50%); -fx-background-radius: 8,7,6; -fx-background-insets: 0,1,2; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Cancel" />
+                  <TextField fx:id="wQEDSearch"   layoutX="14.0" layoutY="15.0" prefHeight="25.0" prefWidth="197.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
